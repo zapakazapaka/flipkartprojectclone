@@ -148,9 +148,9 @@ LOGOUT_URL = "logout"
 LOGOUT_REDIRECT_URL = "/"
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = (
-    "544427294682-c2lllou1lmrq1ksmagqug5ji1rd1nv15.apps.googleusercontent.com"
+    ""
 )
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ""
 
 # Host email
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
