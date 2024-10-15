@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}FlipKart|My Address{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1>Select an address for payment</h1>
+    <form  method="post">
+        {% csrf_token %}
+        <ul>
+            {% for a in addresses %}
+            <li>
+              <input type="radio" name="selected_address_id" id="a_{{a.id}}" required>
+              <label for="a_{{a.id}}">
+                Address: {{a.addr}} - Pincode: {{a.pincode}}<br>
+                Contact: {{a.contactnum}}
+              </label>
+            </li>
+            {%empty%}
+            <li>No saved addresses found!</li>
+            {% endfor %}
+        </ul>
+        <button type="submit" class="btn btn-danger">Proceed to payment</button>
+    </form>
+    <a href="/addaddress">Add a new address</a>
+</div>
+{% endblock body %}
